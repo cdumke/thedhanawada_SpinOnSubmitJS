@@ -69,6 +69,7 @@ createSpinnerButton(
        errorAnimation: 'shake',
        loadingText: 'Submitting...',
        resetForm: true,
+       resetFormFunction: () => document.getElementById('myForm').reset(),
        onLoadingStart: () => console.log('Loading started'),
        onLoadingFinished: () => console.log('Loading finished')
    }
@@ -79,21 +80,22 @@ createSpinnerButton(
 
 The `spinnerOptions` object accepts the following properties:
 
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| spinnerColor | string | '' | Color of the spinner |
-| position | string | 'left' | Position of spinner ('left' or 'right') |
-| hideLabelWhileLoading | boolean | true | Hide button text during loading |
-| showLabel | boolean | true | Show button label |
-| loadingText | string | undefined | Text to show during loading |
-| loadingHtml | string | undefined | HTML to show during loading |
-| showSuccessState | boolean | false | Show success icon after completion |
-| showErrorState | boolean | false | Show error icon on failure |
-| successAnimation | string | 'checkmark' | Success animation type ('checkmark' or 'pulse') |
-| errorAnimation | string | 'shake' | Error animation type ('shake' or 'fade') |
-| resetForm | boolean | false | Reset form after error |
-| onLoadingStart | function | undefined | Callback when loading starts |
-| onLoadingFinished | function | undefined | Callback when loading ends |
+| Option                | Type     | Default     | Description                                                       |
+|-----------------------|----------|-------------|-------------------------------------------------------------------|
+| spinnerColor          | string   | ''          | Color of the spinner                                              |
+| position              | string   | 'left'      | Position of spinner ('left' or 'right')                           |
+| hideLabelWhileLoading | boolean  | true        | Hide button text during loading                                   |
+| showLabel             | boolean  | true        | Show button label                                                 |
+| loadingText           | string   | undefined   | Text to show during loading                                       |
+| loadingHtml           | string   | undefined   | HTML to show during loading                                       |
+| showSuccessState      | boolean  | false       | Show success icon after completion                                |
+| showErrorState        | boolean  | false       | Show error icon on failure                                        |
+| successAnimation      | string   | 'checkmark' | Success animation type ('checkmark' or 'pulse')                   |
+| errorAnimation        | string   | 'shake'     | Error animation type ('shake' or 'fade')                          |
+| resetForm             | boolean  | false       | Reset form after error                                            |
+| resetFormFunction     | function | () => {}    | Function to call to reset form after error (if resetForm is true) |
+| onLoadingStart        | function | undefined   | Callback when loading starts                                      |
+| onLoadingFinished     | function | undefined   | Callback when loading ends                                        |
 
 ## Styling
 

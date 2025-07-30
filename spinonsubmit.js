@@ -57,8 +57,14 @@ export function createSpinnerButton(buttonId, formId, onSubmit, onError, spinner
       showErrorState = false,
       successAnimation = 'checkmark',
       errorAnimation = 'shake',
-      resetForm
+      resetForm = false,
+      resetFormFunction = () => {}
   } = spinnerOptions;
+
+  let currentResetFormFunction = () => {};
+  if (resetForm) {
+    currentResetFormFunction = resetFormFunction;
+  }
 
   const button = document.getElementById(buttonId);
   const form = document.getElementById(formId);
@@ -166,14 +172,14 @@ export function createSpinnerButton(buttonId, formId, onSubmit, onError, spinner
 
                   setTimeout(() => {
                       errorIcon.style.display = 'none';
-                      resetButton(button, spinner, buttonLabel, originalButtonContent, hideLabelWhileLoading, showLabel, successIcon, errorIcon, onLoadingFinished, true, resetForm);
+                      resetButton(button, spinner, buttonLabel, originalButtonContent, hideLabelWhileLoading, showLabel, successIcon, errorIcon, onLoadingFinished, true, currentResetFormFunction);
                       if (errorAnimation === "fade") {
                           button.classList.remove('fade-out');
                       }
                       form.addEventListener('input', enableButtonIfFormChanged);
                   }, 2500);
               } else {
-                  resetButton(button, spinner, buttonLabel, originalButtonContent, hideLabelWhileLoading, showLabel, successIcon, errorIcon, onLoadingFinished, false, resetForm);
+                  resetButton(button, spinner, buttonLabel, originalButtonContent, hideLabelWhileLoading, showLabel, successIcon, errorIcon, onLoadingFinished, false, currentResetFormFunction);
               }
               onError?.(error);
           });

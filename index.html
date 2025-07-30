@@ -84,7 +84,8 @@
                 {
                     successAnimation: 'checkmark',  // Use checkmark animation
                     errorAnimation: 'shake',      // Use shake animation
-                    resetForm: resetExampleForm //Resets the form
+                    resetForm: true,
+                    resetFormFunction: resetExampleForm //Resets the form
                 }
             );
 
@@ -98,7 +99,8 @@
                     showLabel: false,
                     successAnimation: 'none', // No extra animation
                     errorAnimation: 'none',  // No extra animation
-                      resetForm: resetExampleForm //Resets the form
+                    resetForm: true,
+                    resetFormFunction: resetExampleForm //Resets the form
                 }
             );
 
@@ -113,7 +115,8 @@
                     hideLabelWhileLoading: false,
                     successAnimation: 'pulse',
                     errorAnimation: 'fade',
-                    resetForm: resetExampleForm //Resets the form
+                    resetForm: true,
+                    resetFormFunction: resetExampleForm //Resets the form
                 }
             );
 
@@ -127,7 +130,8 @@
                     loadingText: 'Processing...',
                     successAnimation: 'checkmark',
                     errorAnimation: 'shake',
-                    resetForm: resetExampleForm //Resets the form
+                    resetForm: true,
+                    resetFormFunction: resetExampleForm //Resets the form
                 }
             );
 
@@ -141,7 +145,8 @@
                     loadingHtml: '<i class="fas fa-cog fa-spin"></i> Loading...',
                     successAnimation: 'checkmark',
                     errorAnimation: 'shake',
-                      resetForm: resetExampleForm //Resets the form
+                    resetForm: true,
+                    resetFormFunction: resetExampleForm //Resets the form
                 }
             );
 
@@ -154,7 +159,8 @@
                 {
                     showSuccessState: true,
                     successAnimation: 'checkmark', // Redundant, but shows explicit use
-                      resetForm: resetExampleForm //Resets the form
+                    resetForm: true,
+                    resetFormFunction: resetExampleForm //Resets the form
                 }
             );
 
@@ -167,7 +173,8 @@
                 {
                     showErrorState: true,
                     errorAnimation: 'shake', // Redundant, but shows explicit use
-                      resetForm: resetExampleForm //Resets the form
+                    resetForm: true,
+                    resetFormFunction: resetExampleForm //Resets the form
                 }
             );
 
@@ -180,7 +187,8 @@
                 {
                     onLoadingStart: () => console.log('Loading started!'),
                     onLoadingFinished: (event) => console.log('Loading finished! Error:', event.detail.error),
-                      resetForm: resetExampleForm //Resets the form
+                    resetForm: true,
+                    resetFormFunction: resetExampleForm //Resets the form
                 }
             );
 
@@ -193,7 +201,8 @@
                 {
                     successAnimation: 'pulse',
                     errorAnimation: 'fade',
-                    resetForm: resetContactForm
+                    resetForm: true,
+                    resetFormFunction: resetContactForm
                 }
             );
 
@@ -353,7 +362,8 @@ createSpinnerButton(
     {
         successAnimation: 'checkmark',
         errorAnimation: 'shake',
-        resetForm: resetExampleForm
+        resetForm: true,
+        resetFormFunction: resetExampleForm
     }
 );
                 </code></pre>
@@ -374,7 +384,8 @@ createSpinnerButton(
         showLabel: false,
         successAnimation: 'none',
         errorAnimation: 'none',
-        resetForm: resetExampleForm
+        resetForm: true,
+        resetFormFunction: resetExampleForm
     }
 );
                 </code></pre>
@@ -396,7 +407,8 @@ createSpinnerButton(
       hideLabelWhileLoading: false,
       successAnimation: 'pulse',
       errorAnimation: 'fade',
-      resetForm: resetExampleForm
+      resetForm: true,
+      resetFormFunction: resetExampleForm
   }
 );
               </code></pre>
@@ -417,7 +429,8 @@ createSpinnerButton(
       loadingText: 'Processing...',
       successAnimation: 'checkmark',
       errorAnimation: 'shake',
-      resetForm: resetExampleForm
+      resetForm: true,
+      resetFormFunction: resetExampleForm
   }
 );
               </code></pre>
@@ -438,7 +451,8 @@ createSpinnerButton(
       loadingHtml: '<i class="fas fa-cog fa-spin"></i> Loading...',
       successAnimation: 'checkmark',
       errorAnimation: 'shake',
-      resetForm: resetExampleForm
+      resetForm: true,
+      resetFormFunction: resetExampleForm
   }
 );
               </code></pre>
@@ -458,7 +472,8 @@ createSpinnerButton(
   {
       showSuccessState: true,
       successAnimation: 'checkmark',
-      resetForm: resetExampleForm
+      resetForm: true,
+      resetFormFunction: resetExampleForm
   }
 );
               </code></pre>
@@ -478,7 +493,8 @@ createSpinnerButton(
   {
       showErrorState: true,
       errorAnimation: 'shake',
-      resetForm: resetExampleForm
+      resetForm: true,
+      resetFormFunction: resetExampleForm
   }
 );
               </code></pre>
@@ -499,7 +515,8 @@ createSpinnerButton(
   {
       onLoadingStart: () => console.log('Loading started!'),
       onLoadingFinished: (event) => console.log('Loading finished! Error:', event.detail.error),
-      resetForm: resetExampleForm
+      resetForm: true,
+      resetFormFunction: resetExampleForm
   }
 );
               </code></pre>
@@ -523,7 +540,8 @@ createSpinnerButton(
   {
       successAnimation: 'pulse',
       errorAnimation: 'fade',
-      resetForm: resetContactForm
+      resetForm: true,
+      resetFormFunction: resetContactForm
   }
 );
               </code></pre>
